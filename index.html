@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Custom CSS -->
+    <link href="css/euler.css" rel="stylesheet">
+    
+    <!-- JS Libraries -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.9.0/math.min.js" type="text/javascript"></script>
+    <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript" ></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js" type="text/javascript"></script>
+    <script src="js/overlay.js" type="text/javascript"></script>
+    
+    <title>Euler's Method</title>
+</head>
+
+<body>
+    
+    <div class="options">
+        <input id="frac" name="options" type="radio" value="Fractions" onclick="fractions = true; document.getElementById('notif-msg').innerHTML = 'Fraction Mode'; preload();" checked> 
+        <label class="formatOption" for="frac">Fraction</label>
+        <input id="dec" name="options" type="radio" value="Decimals" onclick="fractions = false; document.getElementById('notif-msg').innerHTML = 'Decimal Mode'; preload();"> 
+        <label class="formatOption" for="dec">Decimal</label>
+        <input style="margin-left: 10px;" id="prec" name="options" type="number" onkeypress="return getPrecision(event)"> 
+        <label class="formatOption" for="prec">Precision (Only for Decimal)</label>
+    </div>
+    
+    <center>
+        <h1 class="err-msg" id="err-msg"></h1>
+        <h1 class="notif-msg" id="notif-msg"></h1>
+    </center>
+    
+    <div class="input-params">
+        <div class="input-display">
+            <p1>\(\Delta x =\)</p1>
+            <input class="step" value="0.1" type="text" id="step" onkeypress="return setVars(event)"/>
+        </div>
+        
+        <div class="input-display">
+            <p1 class="input-format">\(y'=\)</p1>
+            <input value="x-y" type="text" class="diff-eq" id="diff-eq" onkeypress="return setVars(event)"/>
+        </div>
+        
+        <div class="input-display">
+            <p1 class="input-format">\(y(\)</p1>
+            <input value="0" type="text" class="x" id="x" onkeypress="return setVars(event)"/>
+            <p1>\()=\)</p1>
+            <input value="2" type="text" class="y" id="y" onkeypress="return setVars(event)"/>
+        </div>
+    
+        <div class="input-display">
+            <p1 class="input-format">\(y(\)</p1>
+            <input value="2" type="text" class="finalX" id="finalX" onkeypress="return setVars(event)"/>
+            <p1>\() = ?\)</p1>
+        </div>
+    </div>
+    
+    <center>
+        <div class="output-box" id="output-box">        
+            <table class="output" id="output" style="width: 100%;">
+              <tr>
+              </tr>
+            </table>
+        </div> 
+    
+    <div class="chart-container" id="chart-container">
+        <canvas id="eulerChart" width="200" height="200"></canvas>
+    </div>
+        
+    <div class="error-chart-container" id="error-chart-container">
+        <canvas id="errorChart" width="200" height="200"></canvas>
+    </div>
+             
+        <script src="js/calculate.js" type="text/javascript"></script>
+        <script src="js/calculateLite.js" type="text/javascript"></script>
+        <script src="js/pointObject.js" type="text/javascript"></script>
+        <script src="js/chart.js" type="text/javascript"></script>
+    </center>
+    
+    <footer>
+        <center>
+            <h1 class="footer">Made with love by Matt Zhou.<br>Graph processing by <a href="http://www.chartjs.org/" target="_blank">ChartJs</a>. Fractions processing by <a href="http://mathjs.org/" target="_blank">MathJS</a>. <br>Pretty-Printing by <a href="https://www.mathjax.org/" target="_blank">MathJax</a>. Euler Method Algorithm by Matt Zhou. <br>Inspired by my Calculus teacher Mr. Dybdahl.<br></h1>
+        </center>
+    </footer>
+    
+</body>
+
+</html>

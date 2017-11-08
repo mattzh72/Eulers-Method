@@ -1,0 +1,265 @@
+body {
+    font-family: Helvetica;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-parameters {
+    margin-top: 100px;
+}
+
+.input-params {
+/*    background-color:  aqua;*/
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.output-box {
+    width: 90%;
+    margin-top: 500px;
+    margin-bottom: 100px;
+    max-height: 800px;
+    overflow:auto;
+}
+
+input[type=text] {
+    border: 0;
+    height: 40px;
+    width: 65px;
+    text-align: center;
+    background-color: #FFFBFF;
+    font-size:30px;
+    font-weight: 200;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+input[type=text]:hover {
+    outline:none;
+    background-color: #FEE5AC;
+}   
+
+input[type=text]:focus {
+    outline:none;
+    background-color: rgba(254, 229, 172, 0.4);
+}  
+
+.chart-container {
+    width: 60%;
+    height: 50%;
+}
+
+.diff-eq {
+    width:160px !important;
+}
+
+.step {
+    width: 100px !important;
+}
+
+.input-display {
+    display:inline-block;
+}
+
+.input-format {
+    margin-left: 50px;
+}
+
+td {
+    max-width: 300px;
+    overflow:auto;
+}
+
+
+::-webkit-scrollbar-track
+{
+	background-color: white;
+}
+
+::-webkit-scrollbar
+{
+	width: 0px;
+    height: 0px;
+	background-color: white;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: lightgrey;
+}
+
+@media only screen and (max-width: 1178px) {
+    .input-params {
+        font-size: 20px;
+    }
+    
+    input[type=text] {
+        font-size: 20px;
+        width: 30px;
+    }
+    
+    .diff-eq {
+        width:100px;
+    }
+
+    .step {
+        width: 70px;
+    }
+    
+    body {
+        font-size: 15px;
+    }
+    
+    .output-box{
+        margin-top: 450px;
+        margin-bottom: 70px;
+    }
+    
+    .footer {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 855px) {
+    .input-params {
+        font-size: 15px;
+    }
+    
+    input[type=text] {
+        font-size: 15px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .diff-eq {
+        width:80px;
+    }
+
+    .step {
+        width: 40px;
+    }
+    
+    body {
+        font-size: 10px;
+    }
+    
+    .input-format {
+        margin-left: 10px;
+    }
+    
+    .output-box{
+        margin-top: 400px;
+        margin-bottom: 50px;
+    }
+}
+.configs-btn {
+    color: #FFFBFF;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.configs-btn:hover {
+    color: #FEE5AC ;
+}
+
+.overlay-main {
+    position: absolute;
+    top: 80px;
+    left: 180px;
+/*    background-color: blue;*/
+    width: 80%;
+    height: 80%;
+/*    border: 1px solid lightgrey;*/
+}
+
+
+
+.euler-description {
+    color: lightgrey;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;  
+}
+
+
+
+.error-chart-container {
+    width: 60%;
+    height: 50%;
+}
+
+.err-msg {
+    color: rgb(255, 105, 97);
+    width: 60%;
+/*    background-color: blue;*/
+    text-align: center;
+    margin-top: 100px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.footer {
+    font-size: 12px;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    font-weight: 100;
+    color: lightgrey;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.footer a{
+    color: lightgrey;
+}
+
+.footer:hover {
+    color: grey;
+}
+
+.footer:hover a{
+    color: #FEE5AC;
+}
+
+
+
+.formatOption {
+    font-size: 11px;
+}
+
+
+
+.options {
+    color: lightgrey;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-weight: 100;
+    font-family: Helvetica;
+}
+
+.options:hover {
+    color: black;
+}
+
+.notif-msg {
+    color: rgb(160, 231, 160);
+    width: 60%;
+/*    background-color: blue;*/
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+label {
+    cursor: pointer;
+}
+
